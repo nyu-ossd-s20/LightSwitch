@@ -1,0 +1,24 @@
+{
+
+  "manifest_version": 2,
+  "name": "LightSwitch",
+  "version": "1.0",
+
+  "description": "Turns on the light when neeeded!",
+  "homepage_url": "https://github.com/nyu-ossd-s20/LightSwitch",
+  "icons": {
+    "48": "./data/bulb-48.png",
+    "32": "./data/bulb-32.png"
+  },
+
+  "permissions": [
+    "activeTab"
+  ],
+
+  "browser_action": {
+    "default_icon": "./data/bulb-32.png",
+    "default_title": "LightSwitch",
+    "default_popup": "popup/menu.html"
+  }
+
+}
