@@ -1,3 +1,4 @@
+// function to send message to extension tab instance
 function queryMessage(msg) {
   browser.tabs.query({
     currentWindow: true,
@@ -11,6 +12,7 @@ function alertError(error) {
   alert(`Failed to execute script: ${error.message}`);
 }
 
+// event listener function that reacts to clicks on menu
 function clickListener() {
   document.addEventListener("click", (e) => {
     x = e.target.id;
