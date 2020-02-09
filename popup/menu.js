@@ -1,4 +1,7 @@
 // function to send message to extension tab instance
+
+//menu. js provides a navigation method for the extension. Allows for a toggle in order to select a command
+
 function queryMessage(msg) {
   browser.tabs.query({
     currentWindow: true,
