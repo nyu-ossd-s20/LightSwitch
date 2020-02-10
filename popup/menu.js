@@ -1,11 +1,14 @@
 // function to send message to extension tab instance
 function queryMessage(msg) {
-  browser.tabs.query({
-    currentWindow: true,
-    active: true
-  }).then(tabs => {
-    browser.tabs.sendMessage(tabs[0].id, {command: msg});
-  }).catch(alertError);
+  browser.tabs
+    .query({
+      currentWindow: true,
+      active: true
+    })
+    .then(tabs => {
+      browser.tabs.sendMessage(tabs[0].id, { command: msg });
+    })
+    .catch(alertError);
 }
 
 function alertError(error) {
@@ -14,12 +17,20 @@ function alertError(error) {
 
 // event listener function that reacts to clicks on menu
 function clickListener() {
-  document.addEventListener("click", (e) => {
+  document.addEventListener("click", e => {
     x = e.target.id;
+    if (x === "on") {
+      e.target.classList.add("selected");
+      document.getElementById("off").classList.remove("selected");
+    } else if (x === "off") {
+      e.target.classList.add("selected");
+      document.getElementById("on").classList.remove("selected");
+    }
     if (x === "on" || x === "off") queryMessage(x);
-  })
+  });
 }
 
-browser.tabs.executeScript({file: "/content_scripts/lightswitch.js"})
-.then(clickListener)
-.catch(alertError);
+browser.tabs
+  .executeScript({ file: "/content_scripts/lightswitch.js" })
+  .then(clickListener)
+  .catch(alertError);
