@@ -2,9 +2,7 @@
 
 ## About this extension
 
-LightSwitch is a FireFox extension that checks the time of the day and change the theme of the browser (or page) accordingly.
-
-The LightSwitch extension detects the time of day. If it is day time, the decoration that lights up the website is turned off. During the night time, the decoration is turned off. This can be done both automatically (the computer will periodically check the user time) or manually. If the user chooses, the lights can be turn on or off.  
+The LightSwitch extension detects the time of day. If it is day time, the decoration that lights up the website is turned on. During the night time, the decoration is turned off. This can be done both automatically (the computer will periodically check the user time) or manually. If the user chooses, the lights can be turn on or off.  
 
 ## Usage
 
