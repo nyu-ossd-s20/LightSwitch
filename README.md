@@ -10,6 +10,10 @@ First of all, run `git clone` on this repository, to clone it to your computer.
 
 To install and use the extension on firefox, open the browser and navigate to the `about:debugging` page. Next, find the "This FireFox" tab and click "Load Temorpary Add-on". Finally, select manifest.json from the cloned repository and load the extension.
 
+## Contributing
+
+Please check `CONTRIBUTING.md` for instructions on how to contribute.
+
 ## License
 
 The code of this extension has been released under the [MIT License](https://opensource.org/licenses/MIT).
